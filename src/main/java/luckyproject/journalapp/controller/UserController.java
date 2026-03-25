@@ -34,7 +34,7 @@ public class UserController {
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user){
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        userService.saveEntry(user);
+        userService.saveUser(user);
         return new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
@@ -45,7 +45,7 @@ public class UserController {
         User userInDb = userService.findByUsername(username);
             userInDb.setUsername(user.getUsername());
             userInDb.setPassword(passwordEncoder.encode(user.getPassword()));
-            userService.saveEntry(userInDb);
+            userService.saveUser(userInDb);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
