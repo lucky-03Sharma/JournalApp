@@ -1,5 +1,4 @@
 package luckyproject.journalapp.controller;
-
 import luckyproject.journalapp.entity.User;
 import luckyproject.journalapp.repository.UserRepository;
 import luckyproject.journalapp.service.UserService;
@@ -10,7 +9,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
